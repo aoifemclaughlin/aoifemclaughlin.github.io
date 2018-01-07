@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i|Spectral:400,400i,700,700i');
+
+/*
+=============================
+General Styling
+=============================
+*/
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    background: #FEF7F7;
+    margin: 0;
+    padding: 0;
+    font-family: 'Spectral', serif;
+   
+}
+
+a {
+    transition: 0.3s;
+}
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(253,207,210); /* Black fallback color */
+    background-color: rgba(253,207,210, 0.95); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top:30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+    line-height: 60 px;
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #3E6173;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+    font-family: 'Montserrat', sans-serif; 
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #FEF7F7;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+.button {
+    position: absolute;
+    top: 56px;
+    color: #3E6173;
+    margin-top: 0;
+/*    margin-bottom: 400px;*/
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    min-width: 182px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    background:#FDCFD2;         
+}
+
+.button:hover {
+    color: #FEF7F7;
+}
+
+.menu {
+    left: 0;
+}
+
+.contact {
+    right: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
+.contact .fa {
+    font-size: 20px;
+    color: #3E6173;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.contact .fa:hover {
+    font-size: 20px;
+    color: #FEF7F7;
+}
+
+.page-title {
+    font-family: 'Spectral', serif;
+    color: #16778F;
+    font-size: 70px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 0;
+}
+/*
+=============================
+Homepage
+=============================
+*/
+
+.home-container {
+    background-image: url(../images/Plants.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h1.logo {
+    margin-top: 0;
+    margin-bottom:0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    color: #3E6173;
+    font-size: 3.5em;
+  
+}
+
+h2.logo-subtitle {
+    text-align: center;
+    color: #56839B;
+    font-size: 2em;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+
+
+/*
+=============================
+Portfolio
+=============================
+*/
+
+.bg-fix {
+    background-size: cover !important;
+}
+
+.portfolio {
+    background-image: url(../images/portfolio.plants.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+.portfolio_item {
+/*    height: 35em;*/
+/*    margin-top: 11.5em;*/
+    color: #3E6173;
+    font-family: 'Spectral', serif;
+    text-decoration: none;
+    background-color: rgba(255,255,255, 0.92); /* Black w/opacity */ 
+    padding: 25px 150px;
+    margin-bottom: 40px;
+    
+}
+
+.portfolio_item-thumbnail {
+    width: 50%;
+    padding-left: 50px;
+}
+
+.portfolio_item-caption {
+    width: 50%;
+    padding-top: 70px;
+}
+
+h2.work-title {
+    margin-bottom: -30px;
+    font-size: 36px;
+    color: #16778F
+  }
+
+h3.work-caption {
+    font-weight: 200;
+    margin top: 0;
+    font-size: 24px;
+    color: #16778F
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+footer {
+    background-color: #FDCFD2;
+    height: 50px;
+    display: block;
+    width: auto;
+}
+
+/*
+=============================
+HiLite
+=============================
+*/
+.casestudy {
+    background-image: url(../images/casestudy-plants.png);
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+
+.hilite-casestudy{
+    max-width: 700px;
+    font-family: 'Spectral', serif;
+    color: #3E6173;
+    font-size: 24px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+.hilitepen {
+   text-align: center;
+    align-content: center;
+    margin-top: 2em;
+}
+
+
+
+/*
+=============================
+About
+=============================
+*/
+.about {
+    max-width: 620px;
+    font-family: 'Spectral', serif;
+    color: #3E6173;
+    font-size: 24px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+.typo-link {
+    text-decoration: none;
+    color: #16778F;
+}
+.typo-link:hover {
+    color: #F58E8F;
+}
+
+
+/*
+=============================
+Resume
+=============================
+*/
+
+.resume {
+    max-width: 800px;
+    font-family: 'Spectral', serif;
+    color: #3E6173;
+    font-size: 24px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+.cv-nametitle {
+    font-family: spectral;
+    font-size: 40px;
+}
+.cvtitle {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 30px; 
+    text-decoration: underline;
+}
+.cvtitle2 {
+  font-family: Montserrat;
+    font-weight: 600; 
+    margin-bottom: 0px;
+}
+.cv-footer {
+    font-family: 'Spectral', serif;
+    color: #3E6173;
+    font-size: 24px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3em;
+}
+

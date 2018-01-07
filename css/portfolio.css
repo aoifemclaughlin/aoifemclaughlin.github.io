@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i|Spectral:400,400i,700,700i');
+
+
+
+
+body {
+    background: #FEF7F7;
+    background-image: url(../images/portfolio.plants.png);
+    background-size: cover;
+    background-repeat: repeat-y;
+    margin: 0;
+    padding: 0;
+    font-family: 'Spectral', serif;
+   
+}
+
+a {
+    transition: 0.3s;
+}
+/*
+.home-container {
+    background-image: url(../images/portfolio.plants.png);
+    
+    background-size: cover;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-repeat: repeat-y;
+}
+*/
+
+h1 {
+
+  
+}
+h2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 0;
+  }
+h3 {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    font-weight: 200;
+    margin top: 0;
+}
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(253,207,210); /* Black fallback color */
+    background-color: rgba(253,207,210, 0.95); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top:30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+    line-height: 60 px;
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #3E6173;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+    font-family: 'Montserrat', sans-serif; 
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #FEF7F7;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+.button {
+    position: absolute;
+    top: 56px;
+    color: #3E6173;
+    margin-top: 0;
+/*    margin-bottom: 400px;*/
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    min-width: 182px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    background:#FDCFD2;         
+}
+
+.button:hover {
+    color: #FEF7F7;
+}
+
+.menu {
+    left: 0;
+}
+
+.contact {
+    right: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
+.contact .fa {
+    font-size: 20px;
+    color: #3E6173;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.contact .fa:hover {
+    font-size: 20px;
+    color: #FEF7F7;
+}
+
+.portfolio_item {
+    height: 35em;
+    margin-top: 11.5em;
+    color: #3E6173;
+    font-family: 'Spectral', serif;
+    text-decoration: none;
+    background-color: rgba(255,255,255, 0.92); /* Black w/opacity */ 
+}
+.travel-app.image {
+    align-content: center;
+}
+
+
+
+
+
+
+
